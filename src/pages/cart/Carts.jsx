@@ -3,9 +3,14 @@ import { PRODUCTS } from "../../products";
 import { ShopContext } from "../../context/ShopContext";
 import CartItem from "./CartItem";
 import "./cart.css";
+import { useNavigate } from "react-router-dom";
 
 const Carts = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, getTotalAmount } = useContext(ShopContext);
+  const totalAmount = getTotalAmount();
+
+  let navigate = useNavigate();
+
   return (
     <div className="cart">
       <div>
@@ -18,6 +23,15 @@ const Carts = () => {
           }
         })}
       </div>
+      {totalAmount > 0 ? (
+        <div className="checkout">
+          <p>Subtotal: ${totalAmount}</p>
+          <button onClick={() => navigate("/")}>Continue Shopping</button>
+          <button>CheckOut!</button>
+        </div>
+      ) : (
+        <h1>Your Cart is Empty!</h1>
+      )}
     </div>
   );
 };
