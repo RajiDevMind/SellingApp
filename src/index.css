@@ -4,4 +4,22 @@
   margin: 0 auto;
   box-sizing: border-box;
   font-family: Roboto, "sans-serif";
+  letter-spacing: 0.8px;
+}
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 26px;
+}
+p {
+  font-size: 15px;
+  color: black;
+}
+img {
+  /* width: 200px; */
 }
