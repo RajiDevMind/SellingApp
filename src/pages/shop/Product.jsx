@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/ShopContext";
 
 const Product = (props) => {
   const { id, productName, price, category, productImage } = props.data;
+  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+
+  const cartItemAmount = cartItems[id];
+
   return (
     <div key={id} className="products">
       <div className="product">
@@ -11,9 +16,16 @@ const Product = (props) => {
             <b>{productName}</b>
           </p>
           <p>${price}</p>
-          <p>{category}</p>
+          {/* <p>{category}</p> */}
         </div>
-        <button className="addToCartBttn">Add To Cart</button>
+        <button className="addToCartBttn" onClick={() => addToCart(id)}>
+          Add To Cart
+          {cartItemAmount > 0 && (
+            <>
+              ({cartItemAmount} {productName})
+            </>
+          )}
+        </button>
       </div>
     </div>
   );
