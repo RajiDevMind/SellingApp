@@ -1,0 +1,122 @@
+[
+  {
+    "productName": "Casual Shirt",
+    "price": 45,
+    "category": "wears",
+    "productImage": "images/img-1.jpg"
+  },
+  {
+    "productName": "Office Shirt",
+    "price": 100,
+    "category": "wears",
+    "productImage": "images/img-2.jpg"
+  },
+  {
+    "productName": "T Shirt",
+    "price": 25,
+    "category": "wears",
+    "productImage": "images/img-3.jpg"
+  },
+  {
+    "productName": "Mens Suit",
+    "price": 300,
+    "category": "wears",
+    "productImage": "images/img-4.jpg"
+  },
+  {
+    "productName": "Mens Tie",
+    "price": 25,
+    "category": "wears",
+    "productImage": "images/img-5.png"
+  },
+  {
+    "productName": "Casual shoes",
+    "price": 200,
+    "category": "wears",
+    "productImage": "images/img-6.png"
+  },
+  {
+    "productName": "black suit",
+    "price": 450,
+    "category": "wears",
+    "productImage": "images/img-7.png"
+  },
+  {
+    "productName": "polo shirt",
+    "price": 45,
+    "category": "wears",
+    "productImage": "images/img-8.png"
+  },
+  {
+    "productName": "denim shirt",
+    "price": 85,
+    "category": "wears",
+    "productImage": "images/img-9.png"
+  },
+  {
+    "productName": "denim pants",
+    "price": 120,
+    "category": "wears",
+    "productImage": "images/img-10.png"
+  },
+  {
+    "productName": "basic cap",
+    "price": 35,
+    "category": "wears",
+    "productImage": "images/img-11.png"
+  },
+  {
+    "productName": "leather boots",
+    "price": 350,
+    "category": "wears",
+    "productImage": "images/img-12.png"
+  },
+  {
+    "productName": "Iphone",
+    "category": "gadgets",
+    "price": 899.0,
+    "productImage": "images/1.png"
+  },
+  {
+    "productName": "MacBook",
+    "category": "gadgets",
+    "price": 1999.0,
+    "productImage": "images/2.png"
+  },
+  {
+    "productName": "Canon EOS",
+    "category": "gadgets",
+    "price": 1599.0,
+    "productImage": "images/3.png"
+  },
+  {
+    "productName": "Jean Shirt",
+    "category": "wears",
+    "price": 79.0,
+    "productImage": "images/4.png"
+  },
+  {
+    "productName": "Strip Light",
+    "category": "household",
+    "price": 859.0,
+    "productImage": "images/5.png"
+  },
+  {
+    "productName": "Long Sleeve Shirt",
+    "price": 59.0,
+    "category": "wears",
+    "productImage": "images/6.webp"
+  },
+  {
+    "productName": "Green Polo Shirt",
+    "price": 67.0,
+    "category": "wears",
+    "productImage": "images/7.webp"
+  },
+  {
+    "productName": "Swag Cap",
+    "price": 19.0,
+    "category": "wears",
+    "productImage": "images/8.webp"
+  }
+]
