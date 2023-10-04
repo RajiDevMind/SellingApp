@@ -30,7 +30,8 @@ class Navbar extends Component {
             </li>
             <li>
               <Link to="/carts">
-                <ShoppingCart size={35} />
+                <p className="cartCount">0</p>
+                <ShoppingCart size={30} />
               </Link>
             </li>
           </ul>

@@ -50,6 +50,14 @@
 #mobile i {
   color: #ffff;
 }
+.cartCount {
+  color: white;
+  font-size: 14px;
+
+  position: absolute;
+  right: 10px;
+  top: -5px;
+}
 
 @media screen and (max-width: 769px) {
   #navbar {

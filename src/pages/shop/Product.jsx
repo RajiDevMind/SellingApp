@@ -1,16 +1,36 @@
-import React, { useContext } from "react";
-import { ShopContext } from "../../context/ShopContext";
+import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import axios from "axios";
 
 const Product = (props) => {
-  const { id, productName, price, category, productImage } = props.data;
-  const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+  const { _id, productName, price, category, productImage } = props.data;
 
-  const cartItemAmount = cartItems[id];
+  const [counts, setCounts] = useState(0);
+  const [cart, setCarts] = useState([]);
+
+  const addToCart = () => {
+    if (counts > 0 - 1) {
+      // axios.post("/api/v1/product");
+      setCounts(counts + 1);
+      let totalCounts = counts + 1,
+        _id;
+      console.log(totalCounts, productName);
+      const itemInCart = { count: totalCounts, productName: productName };
+      localStorage.setItem("carts", JSON.stringify(itemInCart));
+    }
+    console.log(counts + 1, _id);
+  };
 
   return (
-    <div key={id} className="products">
+    <div key={_id} className="products">
       <div className="product">
-        <img src={productImage} alt={productName} />
+        <LazyLoadImage
+          src={productImage}
+          alt={productName}
+          placeholderSrc="placeholderImage"
+          effects="blur"
+        />
         <div className="description">
           <p>
             <b>{productName}</b>
@@ -18,13 +38,9 @@ const Product = (props) => {
           <p>${price}</p>
           {/* <p>{category}</p> */}
         </div>
-        <button className="addToCartBttn" onClick={() => addToCart(id)}>
+        <button className="addToCartBttn" onClick={addToCart}>
           Add To Cart
-          {cartItemAmount > 0 && (
-            <>
-              ({cartItemAmount} {productName})
-            </>
-          )}
+          {counts > 0 && <p style={{ color: "white" }}>({counts})</p>}
         </button>
       </div>
     </div>
